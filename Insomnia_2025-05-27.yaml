@@ -1,0 +1,192 @@
+type: collection.insomnia.rest/5.0
+name: Health
+meta:
+  id: wrk_f1d3f17db2de484286d98e6a1e05c1fc
+  created: 1747837855496
+  modified: 1747837855496
+collection:
+  - url: http://localhost:8081/api/appointments
+    name: Criar
+    meta:
+      id: req_87855bb2a12e42b281af533fa0440560
+      created: 1747837872322
+      modified: 1747837922278
+      isPrivate: false
+      sortKey: -1747837872322
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "patientId": 7,
+          "doctorId": 3,
+          "dateTime": "2025-06-15T14:30:00",
+          "status": "SCHEDULED"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/appointments
+    name: Listar tudo
+    meta:
+      id: req_082ffb4c6933452680f41903fa3b7a6f
+      created: 1747837937515
+      modified: 1747837971752
+      isPrivate: false
+      sortKey: -1747837937515
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/appointments/1
+    name: Buscar por ID
+    meta:
+      id: req_6a24124f35ef4533940d022552cf02a7
+      created: 1747837976201
+      modified: 1747852562225
+      isPrivate: false
+      sortKey: -1747837976201
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/appointments/1
+    name: Atualizar
+    meta:
+      id: req_86d8860046774a578cb0b0c769a3a13f
+      created: 1747838023380
+      modified: 1747852576199
+      isPrivate: false
+      sortKey: -1747838023380
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "patientId": 7,
+          "doctorId": 3,
+          "dateTime": "2025-06-15T15:00:00",
+          "status": "RESCHEDULED"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/appointments/1
+    name: Delete
+    meta:
+      id: req_8d2975d35a3742678049acd6d8ad2a24
+      created: 1747838058238
+      modified: 1747852587487
+      isPrivate: false
+      sortKey: -1747838058238
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/appointments/patient/7
+    name: Filtrar por paciente
+    meta:
+      id: req_4cddf2cb0ff14391b62aff57f1a687d0
+      created: 1747838075765
+      modified: 1747853279757
+      isPrivate: false
+      sortKey: -1747838075765
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8081/api/appointments/doctor/3
+    name: Filtrar por medico
+    meta:
+      id: req_57264a8b775b4931ac2b6290e27cb916
+      created: 1747838115169
+      modified: 1747853175923
+      isPrivate: false
+      sortKey: -1747838115169
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_bb83a05ad8e944ea1f6c44519b364a164021d345
+    created: 1747837855506
+    modified: 1748264751997
+  cookies:
+    - key: JSESSIONID
+      value: CA4DD2FE17748A17486A26CA83C91A67
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-05-26T13:05:51.997Z
+      lastAccessed: 2025-05-26T13:05:51.997Z
+      id: afd9e47a-853f-4da4-ae86-fbcad7cc0b1f
+environments:
+  name: Base Environment
+  meta:
+    id: env_bb83a05ad8e944ea1f6c44519b364a164021d345
+    created: 1747837855502
+    modified: 1747837855502
+    isPrivate: false
